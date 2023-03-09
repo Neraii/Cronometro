@@ -39,11 +39,11 @@ class Cronometro {
         let divisores = [1000, 60, 60];
         let texto = "";
         for (let i = 0; i < 3; i++){
-            tempo[i + 1] = Math.round(tempo[i] / divisores[i]);
+            tempo[i + 1] = Math.trunc(tempo[i] / divisores[i]);
             tempo[i] %= divisores[i]
             texto =  this.#adicionarZero(tempo[i],i)+ ":"+ texto;
         }
-        texto =  this.#adicionarZero(tempo[3],5)+ ":"+ texto;
+        texto =  this.#adicionarZero(tempo[3],99)+ ":"+ texto;
         //para as horas
            texto = texto.slice(0,-1);
         
